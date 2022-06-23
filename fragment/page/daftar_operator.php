@@ -35,11 +35,8 @@ $data = $conn->query("SELECT * FROM tbl_operator WHERE deleted_at IS null");
                                 <td><?=$value->password;?></td>
                                 <td><?=$value->email;?></td>
                                 <td>
-                                    <a href="index.php?hal=edit_operator&id=<?=$value['id_operator'];?>" class="btn btn-sm btn-primary">
-                                        <i class="far fa-edit"></i> 
-                                        Edit
-                                    </a>
-                                    <a href="index.php?hal=hapus_operator&id=<?=$value['id_operator'];?>" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Hapus</a>                                </td>
+                                    <a href="index.php?hal=hapus_operator&id=<?=$value->id_operator;?>" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Hapus</a> 
+                                </td>
                             </tr>
                         <?php
                         $no++;
